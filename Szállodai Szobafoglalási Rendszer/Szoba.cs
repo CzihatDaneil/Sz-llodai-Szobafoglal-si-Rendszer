@@ -56,5 +56,10 @@ namespace Szállodai_Szobafoglalási_Rendszer
             EjszakaiAr = ejszakaiAr;
             osszesRegisztraltSzoba++;
         }
+
+        public override string ToString()
+        {
+            return $"{Szobaszam} Emelet: {Emelet}. | Férőhely: {Ferohely} | Ár: {EjszakaiAr} Ft/éj";
+        }
     }
 }
