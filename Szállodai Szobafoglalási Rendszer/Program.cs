@@ -1,1 +1,1 @@
-﻿Console.WriteLine("Hello, World!");
+﻿using Szállodai_Szobafoglalási_Rendszer;
