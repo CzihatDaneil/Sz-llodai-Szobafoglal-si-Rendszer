@@ -61,5 +61,10 @@ namespace Szállodai_Szobafoglalási_Rendszer
         {
             return $"{Szobaszam} Emelet: {Emelet}. | Férőhely: {Ferohely} | Ár: {EjszakaiAr} Ft/éj";
         }
+
+        public int FoglalasErtek(int ejszakakSzama)
+        {
+            return ejszakakSzama * EjszakaiAr;
+        }
     }
 }
