@@ -4,7 +4,7 @@ List<Szoba>szobak= new List<Szoba>();
 
 if (File.Exists("szobak.txt"))
 {
-    foreach (string aktsor in File.ReadAllLines("szobk.txt"))
+    foreach (string aktsor in File.ReadAllLines("szobak.txt"))
     {
         string[] adatok =aktsor.Split(';');
         int db = adatok.Count();
@@ -16,8 +16,11 @@ if (File.Exists("szobak.txt"))
                 Szoba aktualis = new Szoba(adatok[0], emelet, ar, ferohely);
                 szobak.Add(aktualis);
             }
+            else Console.WriteLine($"Hiáynzó adat(ok) a sorban: {aktsor}");
         }
-        
+        else Console.WriteLine($"Hibás számadat(ok) a sorban: {aktsor}");
     }
 }
-else { Console.WriteLine("A szobak.txt nem létezik"); }
+else  Console.WriteLine("A szobak.txt nem létezik");
+
+//foreach(Szoba szoba in szobak) Console.WriteLine(szoba);
