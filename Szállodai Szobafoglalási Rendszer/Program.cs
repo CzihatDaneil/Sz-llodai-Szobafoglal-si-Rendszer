@@ -25,3 +25,9 @@ else  Console.WriteLine("A szobak.txt nem létezik");
 
 foreach (Szoba szoba in szobak) Console.WriteLine(szoba);
 Console.WriteLine($"Összes regisztrált szoba: {Szoba.OsszesRegisztraltSzoba}");
+double osszesen = 0;
+foreach(Szoba szoba in szobak) osszesen += szoba.EjszakaiAr * szoba.Ferohely;
+Console.WriteLine($"Összesen: {IlletekKalkulator.VegosszegIFAVal(osszesen)} Ft bevétel van egy teljes kihasználtság esetén egy éjszaka");
+
+    
+
