@@ -29,5 +29,14 @@ double osszesen = 0;
 foreach(Szoba szoba in szobak) osszesen += szoba.EjszakaiAr * szoba.Ferohely;
 Console.WriteLine($"Összesen: {IlletekKalkulator.VegosszegIFAVal(osszesen)} Ft bevétel van egy teljes kihasználtság esetén egy éjszaka");
 
-    
-
+Szoba legolcsobb = szobak[0];
+foreach(Szoba szoba in szobak)
+{
+    if (szoba.Ferohely > legolcsobb.Ferohely)
+    {
+        legolcsobb = szoba;
+    }
+}
+Console.WriteLine($"A legolcsóbb szoba:{legolcsobb}");
+Szoba legolcsobb2 = szobak.MaxBy(szoba => szoba.Ferohely);
+Console.WriteLine($"A legolcsóbb szoba:{legolcsobb2}");
